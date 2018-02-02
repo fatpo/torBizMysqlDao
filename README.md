@@ -45,7 +45,8 @@ class StudentDao(BaseDao):
     append_list = ['age']  # int list, but sometimes need to += n, like: add_cnt = add_cnt+10, view_cnt=view_cnt+1
 ```
 
-# Test case-1：get the student which id=1 and name='tom'
+# Test case-1：
+get the student which id=1 and name='tom'   
 ```
 pool = db.app_pool
 with (yield pool.Connection()) as conn:
@@ -70,7 +71,8 @@ with (yield pool.Connection()) as conn:
     ], is_fetchone=True, with_del=True)
 ```
 
-# Test case：update the sutdent age+=1 who's name='tom'
+# Test case-2：
+update the sutdent age+=1 who's name='tom'   
 ```
 pool = db.app_pool
 with (yield pool.Connection()) as conn:
